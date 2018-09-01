@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="MvpDagger"
+    description="Mvp dagger fragment package">
+
+    <category value="Fragment" />
+
+    <dependency name="android-support-v4" revision="8" />
+
+    <parameter
+        id="classBaseName"
+        type="string"
+        constraints="nonempty|class|unique"
+        default="BaseClassName"
+        suggest="Mvp dagger fragment base class name"
+        name="Mvp dagger fragment base class name" />
+
+    <parameter
+        id="fragmentLayout"
+        type="string"
+        constraints="nonempty"
+        default="fragment_layout"
+        suggest="Fragment layout"
+        name="Fragment layout without .xml" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
